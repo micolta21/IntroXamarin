@@ -7,6 +7,14 @@
                     VerticalOptions="CenterAndExpand">
             <StackLayout Margin="20,32"
                          Spacing="0">
+                
+                <Frame BackgroundColor="SkyBlue" CornerRadius="20">
+                    <Label Text="Register" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                </Frame>
 
                 <Grid>
 
@@ -14,21 +22,38 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
+
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/> 
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Text="0,0" Grid.Row="0" Grid.Column="0"/>
-                    <Label Text="0,1" Grid.Row="0" Grid.Column="1"/>
 
-                    <Label Text="1,0" Grid.Row="1" Grid.Column="0"/>
-                    <Label Text="1,1" Grid.Row="1" Grid.Column="1"/>
-                    
-                    <Label Text="2,0" Grid.Row="2" Grid.Column="0"/>
-                    <Label Text="2,1" Grid.Row="2" Grid.Column="1"/>
+                    <Label Grid.Row="0" Grid.Column="0" Text="First Name"/>
+                    <Entry Grid.Row="0" Grid.Column="1" Placeholder="Enter the first name" x:Name="FirstName"/>
 
+                    <Label Grid.Row="1" Grid.Column="0" Text="Last Name"/>
+                    <Entry Grid.Row="1" Grid.Column="1" Placeholder="Enter the last name" x:Name="LastName"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Telephone"/>
+                    <Entry Grid.Row="2" Grid.Column="1" Placeholder="Enter the telephone" Keyboard="Numeric" x:Name="Telephone"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Email"/>
+                    <Entry Grid.Row="3" Grid.Column="1" Placeholder="Enter the email" Keyboard="Email" x:Name="Email"/>
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="Enrollment Date"/>
+                    <DatePicker Grid.Row="4" Grid.Column="1" x:Name="EnrollmentDate" Date="2022-05-12"/>
                 </Grid>
+                
+                <Button Text="Register" BackgroundColor="Beige" TextColor="Black"
+                    CornerRadius="50"
+                    x:Name="Register"
+                    Clicked="Register_Clicked"/>
+
+                <ActivityIndicator IsRunning="True" x:Name="Indicator"/>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
