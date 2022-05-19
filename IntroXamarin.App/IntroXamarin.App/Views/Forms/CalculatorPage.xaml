@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculatorPage">
+
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="Center"
+                    VerticalOptions="Center">
+
+            <StackLayout Margin="20,32"
+                         Spacing="0">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Text="C" CornerRadius="100" TextColor="Red" x:Name="Limpiar"/>
+                    <Button Grid.Row="0" Grid.Column="1" Text="√" CornerRadius="100" TextColor="Green" x:Name="RaizCuadrada"/>
+                    <Button Grid.Row="0" Grid.Column="2" Text="%" CornerRadius="100" TextColor="Green" x:Name="Porciento"/>
+                    <Button Grid.Row="0" Grid.Column="3" Text="÷" CornerRadius="100" TextColor="Green" x:Name="Division"/>
+
+                    <Button Grid.Row="1" Grid.Column="0" CornerRadius="100" Text="1" x:Name="Uno"/>
+                    <Button Grid.Row="1" Grid.Column="1" CornerRadius="100" Text="2" x:Name="Dos"/>
+                    <Button Grid.Row="1" Grid.Column="2" CornerRadius="100" Text="3" x:Name="Tres"/>
+                    <Button Grid.Row="1" Grid.Column="3" CornerRadius="100" Text="X" TextColor="Green" x:Name="Multiplicacion"/>
+
+                    <Button Grid.Row="2" Grid.Column="0" CornerRadius="100" Text="4" x:Name="Cuatro"/>
+                    <Button Grid.Row="2" Grid.Column="1" CornerRadius="100" Text="5" x:Name="Cinco"/>
+                    <Button Grid.Row="2" Grid.Column="2" CornerRadius="100" Text="6" x:Name="Seis"/>
+                    <Button Grid.Row="2" Grid.Column="3" CornerRadius="100" Text="-" TextColor="Green" x:Name="Menos"/>
+
+                    <Button Grid.Row="3" Grid.Column="0" CornerRadius="100" Text="7" x:Name="Siete"/>
+                    <Button Grid.Row="3" Grid.Column="1" CornerRadius="100" Text="8" x:Name="Ocho"/>
+                    <Button Grid.Row="3" Grid.Column="2" CornerRadius="100" Text="9" x:Name="Nueve"/>
+                    <Button Grid.Row="3" Grid.Column="3" CornerRadius="100" Text="+" TextColor="Green" x:Name="Mas"/>
+
+                    <Button Grid.Row="4" Grid.Column="0" CornerRadius="100" Text="+/-" x:Name="MasMenos"/>
+                    <Button Grid.Row="4" Grid.Column="1" CornerRadius="100" Text="0" x:Name="Cero"/>
+                    <Button Grid.Row="4" Grid.Column="2" CornerRadius="100" Text="." x:Name="Punto"/>
+                    <Button Grid.Row="4" Grid.Column="3" CornerRadius="100" Text="=" TextColor="White" BackgroundColor="Green" x:Name="Igual"/>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage> 

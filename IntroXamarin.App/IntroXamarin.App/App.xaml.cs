@@ -11,9 +11,8 @@ namespace IntroXamarin.App
         {
             InitializeComponent();
 
-            MainPage = new RegisterGridPage();
+            MainPage = new CalculatorPage();
         }
-
         protected override void OnStart()
         {
         }
