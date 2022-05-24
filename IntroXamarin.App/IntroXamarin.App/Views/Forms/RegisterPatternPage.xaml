@@ -24,30 +24,37 @@
                 </Frame>
 
                 <Label Text="First Name"/>
-                <Entry Placeholder="Enter the first name" x:Name="FirstName"/>
+                <Entry Placeholder="Enter the first name" 
+                       x:Name="FirstName" 
+                       Text="{Binding FirstName}"/>
 
                 <Label Text="Last Name"/>
-                <Entry Placeholder="Enter the last name" x:Name="LastName"/>
+                <Entry Placeholder="Enter the last name" 
+                       x:Name="LastName" 
+                       Text="{Binding LastName}"/>
 
                 <Label Text="Telephone"/>
                 <Entry Placeholder="Enter the telephone" 
                         Keyboard="Numeric"
-                        x:Name="Telephone"/>
+                        x:Name="Telephone"
+                       Text="{Binding Telephone}"/>
 
                 <Label Text="Email"/>
                 <Entry Placeholder="Enter the email" 
                         Keyboard="Email"
-                        x:Name="Email"/>
+                        x:Name="Email"
+                       Text="{Binding Email}"/>
 
                 <Label Text="Enrollment Date"/>
-                <DatePicker x:Name="EnrollmentDate" Date="2022-05-12"/>
+                <DatePicker x:Name="EnrollmentDate" 
+                            Date="{Binding EnrollmentDate}"/>
 
                 <Button Text="Register" 
                     BackgroundColor="Beige"
                     TextColor="Black"
                     CornerRadius="50"
                     x:Name="Register"
-                    Clicked="Register_Clicked"/>
+                    Command="{Binding RegisterCommand}"/>
 
             </StackLayout>
         </ScrollView>

@@ -17,32 +17,32 @@ namespace IntroXamarin.App.Views.Forms
             InitializeComponent();
         }
 
-        private void Register_Clicked(object sender, EventArgs e)
-        {
-            bool required = false;
-            if (string.IsNullOrEmpty(FirstName.Text))
-            {
-                required = true;
-                FirstName.BackgroundColor = Color.Red;
-                FirstName.Opacity = 50;
-            }
+        //private void Register_Clicked(object sender, EventArgs e)
+        //{
+        //    bool required = false;
+        //    if (string.IsNullOrEmpty(FirstName.Text))
+        //    {
+        //        required = true;
+        //        FirstName.BackgroundColor = Color.Red;
+        //        FirstName.Opacity = 50;
+        //    }
 
-            if (required)
-            {
-                DisplayAlert("Notify", "Fields required", "Cancel");
-                return;
-            }
+        //    if (required)
+        //    {
+        //        DisplayAlert("Notify", "Fields required", "Cancel");
+        //        return;
+        //    }
 
-            var firstName = FirstName.Text;
-            var lastName = LastName.Text;
-            var email = Email.Text;
-            var telephone = long.Parse(Telephone.Text);
-            var enrollmentdate = EnrollmentDate.Date;
+        //    var firstName = FirstName.Text;
+        //    var lastName = LastName.Text;
+        //    var email = Email.Text;
+        //    var telephone = long.Parse(Telephone.Text);
+        //    var enrollmentdate = EnrollmentDate.Date;
 
-            var Message = $"Register succesful {firstName} {lastName}.";
+        //    var Message = $"Register succesful {firstName} {lastName}.";
 
-            DisplayAlert("Notify", Message, "Cancel");
-            Register.BackgroundColor = Color.Chocolate;
-        }
+        //    DisplayAlert("Notify", Message, "Cancel");
+        //    Register.BackgroundColor = Color.Chocolate;
+        //}
     }
 }
